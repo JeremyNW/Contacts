@@ -8,10 +8,10 @@
 import Foundation
 
 class Contact: Codable {
-    let name: String
-    let email: String
-    let phone: Int
-    let address: String
+    var name: String
+    var email: String
+    var phone: Int
+    var address: String
     
     init(name: String, email: String, phone: Int, address: String) {
         self.name = name
@@ -26,7 +26,7 @@ extension Contact: Equatable {
         return lhs.name == rhs.name &&
             lhs.email == lhs.email &&
             lhs.phone == rhs.phone
-        lhs.address == rhs.address
+            lhs.address == rhs.address
     }
     
     
